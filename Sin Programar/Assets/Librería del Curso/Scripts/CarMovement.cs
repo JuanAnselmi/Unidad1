@@ -32,6 +32,8 @@ public class CarMovement : MonoBehaviour
     {
         frontDriverW.motorTorque = m_veticalInput * motorForce;
         frontPassangerW.motorTorque = m_veticalInput * motorForce;
+        //rearDriverW.motorTorque = m_veticalInput * motorForce;
+        //rearPassangerW.motorTorque = m_veticalInput * motorForce;
     }
 
     private void UpdateWheelPoses()
@@ -60,4 +62,5 @@ public class CarMovement : MonoBehaviour
         Accelerate();
         UpdateWheelPoses();
     }
+   
 }
