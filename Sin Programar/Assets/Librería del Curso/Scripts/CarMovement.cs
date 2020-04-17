@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    private float m_horizontalInput;
-    private float m_veticalInput;
-    private float m_steeringAngle;
+    float m_horizontalInput;
+    float m_veticalInput;
+    float m_steeringAngle;
+    [SerializeField] float maxSteerAngle = 30;
+    [SerializeField] float motorForce = 50;
 
-    public WheelCollider frontDriverW, frontPassangerW;
-    public WheelCollider rearDriverW, rearPassangerW;
-    public Transform frontDriverT, frontPassangerT;
-    public Transform rearDriverT, rearPassangerT;
-    public float maxSteerAngle = 30;
-    public float motorForce = 50;
+    [SerializeField] WheelCollider frontDriverW, frontPassangerW;
+    [SerializeField] WheelCollider rearDriverW, rearPassangerW;
+    [SerializeField] Transform frontDriverT, frontPassangerT;
+    [SerializeField] Transform rearDriverT, rearPassangerT;
 
     public void GetInput()
     {
@@ -62,5 +62,4 @@ public class CarMovement : MonoBehaviour
         Accelerate();
         UpdateWheelPoses();
     }
-   
 }
